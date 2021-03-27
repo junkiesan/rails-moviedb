@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
+require "yaml"
+
+url = "https://gist.githubusercontent.com/junkiesan/5105f7827413e0244d63509c1bed572a/raw/3ea8848bbbcf0dbc888ba74d83c2421aab2a59be/imdb.yml"
+p file = YAML.load(open(url).read)
